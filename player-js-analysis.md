@@ -20,5 +20,13 @@
         Changes the playState property to "stopped".
         Instantiates a new sound object using this.currentlyPlaying, which was just updated to song.
         It also checks that if the playState is paused or the playState is stopped
+        -the soundObject volume is set to setVolume with a parameter of this.volume.
+        -plays the soundObject property
+        -changes the playState property to "playing"
+        -removes "paused" class from the element property of this.currentlyPlaying and adds "playing"
+        If not, then
+        -pause the soundObject property
+        -changes the playState to "paused"
+        -removes "playing" class from the element property of this.currentlyPlaying and adds "paused".
     7) The skipTo() method accepts one parameter, "percent." If the player is playing, it will return:   this.soundObject.setTime( (percent / 100) * this.soundObject.getDuration() );
     8) The setVolume() method accepts one parameter, "percent." The soundObject is set to the value of the percent of "volume."
